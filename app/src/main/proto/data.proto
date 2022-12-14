@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option java_package = "com.monksoft.monklogin";
+option java_multiple_files = true;
+
+package MonkPackage;
+
+message Monk {
+  string monkcode = 1;
+}
