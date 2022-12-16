@@ -138,17 +138,20 @@ class LoginFragment : Fragment() {
     }
 
     private fun showDialog(){
-        activity?.let {
-            AlertDialog.Builder(it)
-                .setTitle("¡ Ekucode incorrect !")
-                .setMessage("The entered Ekucode is incorrect, please try again.")
-                .setPositiveButton("Close",
-                    DialogInterface.OnClickListener { dialog, _ ->
-                        dialog.dismiss()
-                    })
-                .setCancelable(true)
-                .show()
-        }
+//        activity?.let {
+//            AlertDialog.Builder(it)
+//                .setTitle("¡ Ekucode incorrect !")
+//                .setMessage("The entered Ekucode is incorrect, please try again.")
+//                .setPositiveButton("Close",
+//                    DialogInterface.OnClickListener { dialog, _ ->
+//                        dialog.dismiss()
+//                    })
+//                .setCancelable(true)
+//                .show()
+//        }
+
+        val dialogo = DialogFragment("¡ Ekucode incorrect !", "The entered Ekucode is incorrect, please try again.", "Accept")
+        dialogo.show(parentFragmentManager, "dialog")
     }
 
     private external fun sendMonkCode(): Boolean
